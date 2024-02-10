@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Data Analyst Portfolio</title>
+  <style>
+    /* Add custom styles here */
+    body.dark-mode {
+      background-color: #1a202c;
+      color: #cbd5e0;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navigation -->
+  <nav class="bg-blue-500 p-4 text-white">
+    <div class="container mx-auto flex justify-between">
+      <div class="text-2xl font-bold">NANDINI RAJPUT</div>
+      <!-- Add your navigation links if needed -->
+      <button id="toggleMode" class="focus:outline-none">Toggle Mode</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-gray-800 text-white h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-4">HELLO</h1>
+      <p class="text-lg">I am Nandini Rajput , An enthusiastic Data Analyst.</p>
+      <p class="text-lg">I am skilled in python, Excel, Power Bi and SQL to make data-driven decision</p>
+    </div>
+  </header>
+
+
+  <!-- Projects Section -->
+  <section class="container mx-auto my-8">
+    <h2 class="text-2xl font-bold mb-4">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Add your project cards here -->
+      <div class="bg-white p-4 rounded-lg shadow">
+        <h3 class="text-lg font-bold mb-2">Project 1</h3>
+        <p>Description of the project goes here.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <h3 class="text-lg font-bold mb-2">Project 2</h3>
+        <p>Description of the project goes here.</p>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="container mx-auto my-8">
+    <h2 class="text-2xl font-bold mb-4">Skills</h2>
+    <!-- Add your skills here -->
+    <ul class="list-disc list-inside">
+      <li>Python</li>
+      <li>Data Analysis</li>
+      <li>Data Visualization</li>
+      <!-- Add more skills as needed -->
+    </ul>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="container mx-auto my-8">
+    <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+    <form id="contactForm" class="w-full max-w-md">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+        <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+        <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+        <textarea id="message" name="message" class="w-full p-2 border border-gray-300 rounded"></textarea>
+      </div>
+      <button type="button" onclick="submitForm()" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-700">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4">
+    <div class="text-center">
+      <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript for light/dark mode toggle
+    const toggleModeButton = document.getElementById('toggleMode');
+    const body = document.body;
+
+    toggleModeButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+    });
+
+    // JavaScript for form submission
+    function submitForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Simple form validation
+      if (name && email && message) {
+        // You can customize this part to send the form data to your server or display a success message
+        alert('Form submitted successfully!');
+        document.getElementById('contactForm').reset();
+      } else {
+        alert('Please fill out all fields.');
+      }
+    }
+  </script>
+
+</body>
+</html>
