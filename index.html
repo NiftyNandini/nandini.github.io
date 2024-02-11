@@ -18,8 +18,7 @@
   <!-- Navigation -->
   <nav class="bg-blue-500 p-4 text-white">
     <div class="container mx-auto flex justify-between">
-      <div class="text-2xl font-bold">NANDINI RAJPUT</div>
-      <!-- Add your navigation links if needed -->
+      <div class="text-2xl font-bold">Your Name</div>
       <button id="toggleMode" class="focus:outline-none">Toggle Mode</button>
     </div>
   </nav>
@@ -27,18 +26,24 @@
   <!-- Hero Section -->
   <header class="bg-gray-800 text-white h-screen flex items-center justify-center">
     <div class="text-center">
-      <h1 class="text-4xl font-bold mb-4">HELLO</h1>
-      <p class="text-lg">I am Nandini Rajput , An enthusiastic Data Analyst.</p>
-      <p class="text-lg">I am skilled in python, Excel, Power Bi and SQL to make data-driven decision</p>
+      <h1 class="text-4xl font-bold mb-4">Data Analyst Portfolio</h1>
+      <p class="text-lg">Experienced data analyst with a focus on Python programming.</p>
     </div>
   </header>
 
+  <!-- Work Experience Section -->
+  <section class="container mx-auto my-8">
+    <h2 class="text-2xl font-bold mb-4">Work Experience</h2>
+    <div class="bg-white p-4 rounded-lg shadow">
+      <h3 class="text-lg font-bold mb-2">Data Analyst - Company XYZ</h3>
+      <p>Worked as a data analyst for one year, utilizing Python for data analysis and visualization. Collaborated with cross-functional teams to derive insights from large datasets.</p>
+    </div>
+  </section>
 
   <!-- Projects Section -->
   <section class="container mx-auto my-8">
     <h2 class="text-2xl font-bold mb-4">Projects</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Add your project cards here -->
       <div class="bg-white p-4 rounded-lg shadow">
         <h3 class="text-lg font-bold mb-2">Project 1</h3>
         <p>Description of the project goes here.</p>
@@ -47,20 +52,38 @@
         <h3 class="text-lg font-bold mb-2">Project 2</h3>
         <p>Description of the project goes here.</p>
       </div>
-      <!-- Add more project cards as needed -->
     </div>
   </section>
 
   <!-- Skills Section -->
   <section class="container mx-auto my-8">
     <h2 class="text-2xl font-bold mb-4">Skills</h2>
-    <!-- Add your skills here -->
     <ul class="list-disc list-inside">
       <li>Python</li>
       <li>Data Analysis</li>
       <li>Data Visualization</li>
-      <!-- Add more skills as needed -->
     </ul>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="container mx-auto my-8">
+    <h2 class="text-2xl font-bold mb-4">Certifications</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-4 rounded-lg shadow">
+        <h3 class="text-lg font-bold mb-2">Certification 1</h3>
+        <p>Description of the certification goes here.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <h3 class="text-lg font-bold mb-2">Certification 2</h3>
+        <p>Description of the certification goes here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section class="container mx-auto my-8">
+    <h2 class="text-2xl font-bold mb-4">Resume</h2>
+    <p>Your resume details go here.</p>
   </section>
 
   <!-- Contact Form Section -->
@@ -90,8 +113,8 @@
     </div>
   </footer>
 
+  <!-- JavaScript Section -->
   <script>
-    // JavaScript for light/dark mode toggle
     const toggleModeButton = document.getElementById('toggleMode');
     const body = document.body;
 
@@ -99,15 +122,12 @@
       body.classList.toggle('dark-mode');
     });
 
-    // JavaScript for form submission
     function submitForm() {
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const message = document.getElementById('message').value;
 
-      // Simple form validation
       if (name && email && message) {
-        // You can customize this part to send the form data to your server or display a success message
         alert('Form submitted successfully!');
         document.getElementById('contactForm').reset();
       } else {
